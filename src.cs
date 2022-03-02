@@ -106,6 +106,7 @@ class Solution {
         long ans = 0;
         for(int i = 0; i < N; i++){
             ans = ans + (a[i]%p * 1L * pow(10, N-1-i, p))%p;
+            ans = ans%p; //adding all the remainders can result in overflow, to avoid that take modulo
         }
         Console.WriteLine(ans%p);
     }
